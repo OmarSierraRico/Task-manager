@@ -58,7 +58,7 @@ function renderTasks() {
 }
 
 function startButtonHandler(id) {
-  time = 0.5 * 60;
+  time = 0.05 * 60;
   current = id;
   const taskId = tasks.findIndex((task) => task.id === id);
   document.querySelector("#time #taskName").textContent = tasks[taskId].title;
@@ -84,7 +84,7 @@ function markComplete(id) {
 }
 
 function startBreak() {
-  time = 1 * 60;
+  time = 3 * 60;
   document.querySelector("#time #taskName").textContent = "Break";
   timerBreak = setInterval(timerBreakHandler, 1000);
 }
